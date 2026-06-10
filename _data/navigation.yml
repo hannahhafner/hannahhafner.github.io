@@ -28,8 +28,6 @@ main:
     
   # - title: "CV"
   #   url: /cv-json/
-  - title: "Non Menu Page"
-    url: /non-menu-page/
     
   - title: "Guide"
     url: /markdown/
