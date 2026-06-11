@@ -1,22 +1,21 @@
 ---
-title: 'Creating an Academic Personal Website'
+title: 'How to create an Academic Personal Website'
 date: 2026-06-10
 permalink: /posts/2026/06/website_tutorial/
 excerpt: Curious about how I created my personal website? It's not as difficult as it may seem. Also, it's completely free to create and host!
 toc: true
 toc_sticky: true
+layout: single
 tags:
   - tutorials
 ---
-
-# Creating an Academic Portfolio Website
 This website was created using GitHub Pages, which you can read more about [in their documentation](https://docs.github.com/en/pages). I based my website off this [existing GitHub Pages template.](https://academicpages.github.io/) If you want to use a different template, you can find additional templates [here,](https://github.com/topics/portfolio-website) or you can do your own research.
 
  Using a pre-existing template is why you don't need a background in web development to create your own academic portfolio! 
 
  For this tutorial, I am assuming that you have a basic understanding of GitHub (clone, commit, pull, push) and Markdown in order to create the the webpages on your website
  
-If you don't, I recommend checking out [this GitHub tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world) and this [basic Markdown syntax.](https://www.markdownguide.org/basic-syntax/) 
+If you don't, I recommend checking out [this GitHub tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world) and this [basic Markdown syntax.](https://www.markdownguide.org/basic-syntax/). You can also check out this [detailed tutorial](https://jayrobwilliams.com/posts/2020/06/academic-website/) on creating an Academic Pages website (assuming no prior knowledge in GitHub) created by Rob Williams.
 
  On to the website tutorial!
 
@@ -52,18 +51,41 @@ In order to setup the sidebar for the website, you will need to edit the `_confi
 ### Modify Basic Site Settings
 If you open the `_config.yml` file in your repository, under basic site settings, you should see these options from the Academic Pages template:
 
-![Basic Site Settings](/images/basic_site_settings.png)
+
+```yml
+# Basic Site Settings
+locale                   : "en-US"
+site_theme               : "default" # The available themes options are "default", "air", "sunrise", "mint", "dirt" and "contrast"
+title                    : "Your Name / Site Title"
+title_separator          : "-"
+name                     : &name "Your Name"
+description              : &description "Your Name's academic portfolio"   # Update this with a general description of your site, this is the default if not overridden by a page
+url                      : https://academicpages.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
+                                                           # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
+baseurl                  : "" # the subpath of your site, e.g. "/blog"
+repository               : "academicpages/academicpages.github.io"
+```
 
 Make sure you update the title, name, description, url, and repository for your website. 
 
-Repository is the path to the repository from your GitHub account, which should be **\<your_github_username>/<your_github_username>.github.io**
+Repository is the path to the repository from your GitHub account, which should be **\<your_github_username>/\<your_github_username\>.github.io**
 
 ### Modify Author Information
 In order to change the profile picture, first you need to upload a headshot of yourself into the `images/` folder for the repository. You can do this on the GitHub website by clicking on the `images/` folder and clicking Add File in the top right corner, or by locally adding a file and pushing it to GitHub. 
 
 Replace `profile.png` with the name of your image file.
 
-![Biographic Information](/images/biographic_info.png)
+```yml
+  # Biographic information
+  avatar           : "profile.png"
+  name             : "Your Sidebar Name"
+  pronouns         : # example: "she/her"  
+  bio              : "Short biography for the left-hand sidebar"
+  location         : "Earth"
+  employer         : "Red Brick University"
+  uri              : # URL
+  email            : "none@example.org" 
+```
 
 Also, make sure you modify name, bio, location and employer. If you don't want a certain category shown on the sidebar, you can comment it out by putting a \# in front of the corresponding line (as shown in the image for pronouns and URI)
 
@@ -113,9 +135,6 @@ At the top of your Markdown file, add a YAML header like this one:
 permalink: /my-new-page/
 title: "This is my new page"
 author_profile: true
-redirect_from: 
-  - "/mnp/"
-  - "/mnp.html"
 ---
 ```
 Note the permalink — this is how you direct the navigation menu to specific pages on the website. 
@@ -150,5 +169,7 @@ redirect_to: /files/myCV.pdf
 This ensures that when a user clicks on the CV tab, they will be taken to your CV file instead of a Markdown CV. 
 
 ## Read More
-Now that the foundation of your website is set up, I highly recommend checking out the [Academic Pages wiki](https://github.com/academicpages/academicpages.github.io/wiki) for more information. 
-* Here, you can read more about how the content sections of the template are organized, update the Academic pages theme, and even add Google Analytics to your site (track website engagement).
+Congratulations! At the end of this tutorial, you should have a *live academic website* with a homepage and CV and with even  some additional tabs in the navigation menu.
+
+* Now that the foundation of your website is set up, I highly recommend checking out the [Academic Pages wiki](https://github.com/academicpages/academicpages.github.io/wiki) for more information. 
+* I would also recommend checking out Rob Williams' tutorials on [building an academic website](https://jayrobwilliams.com/posts/2020/06/academic-website/), [customizing an academic website](https://jayrobwilliams.com/posts/2020/07/customizing-website/), and [adding content to an academic website](https://jayrobwilliams.com/posts/2020/08/website-content/).
