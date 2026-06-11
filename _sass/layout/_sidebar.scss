@@ -64,15 +64,17 @@
   margin-bottom: 1em;
 
   @include breakpoint($large) {
-    position: relative;
-    float: right;
-    width: $right-sidebar-width-narrow;
-    margin-left: span(0.5 of 12);
-    z-index: 10;
-  }
+    position: sticky;
+    top: 80px !important;
 
-  @include breakpoint($x-large) {
-    width: $right-sidebar-width;
+    float: right;
+    width: 220px;
+
+    margin-right: -220px;
+
+    padding-left: 1em;
+
+    z-index: 10;
   }
 }
 
