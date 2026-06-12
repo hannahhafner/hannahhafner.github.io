@@ -1,6 +1,6 @@
 ---
 title: 'How to create an Academic Personal Website'
-date: 2026-06-10
+date: 2026-06-11
 permalink: /posts/2026/06/website_tutorial/
 excerpt: Curious about how I created my personal website? It's not as difficult as it may seem. Also, it's completely free to create and host!
 toc: true
@@ -15,10 +15,9 @@ This website was created using GitHub Pages, which you can read more about [in t
 
  For this tutorial, I am assuming that you have a basic understanding of GitHub (clone, commit, pull, push) and Markdown in order to create the the webpages on your website
  
-If you don't, I recommend checking out [this GitHub tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world) and this [basic Markdown syntax.](https://www.markdownguide.org/basic-syntax/). You can also check out this [detailed tutorial](https://jayrobwilliams.com/posts/2020/06/academic-website/) on creating an Academic Pages website (assuming no prior knowledge in GitHub) created by Rob Williams.
+If you don't, I recommend checking out [this GitHub tutorial](https://docs.github.com/en/get-started/start-your-journey/hello-world) and this [basic Markdown syntax.](https://www.markdownguide.org/basic-syntax/) You can also check out this [detailed tutorial](https://jayrobwilliams.com/posts/2020/06/academic-website/) on creating an Academic Pages website (assuming no prior knowledge in GitHub) created by Rob Williams.
 
  On to the website tutorial!
-
 ## Required Materials
 1. GitHub Account
     * If you don't have a GitHub account, you can make one [here](https://docs.github.com/en/get-started/start-your-journey/creating-an-account-on-github).
@@ -38,7 +37,7 @@ This will bring you to a new page where you can name your new forked repository.
 You should now have a new repository for your website!
 
 ## Step 2: Set up the Sidebar
-In order to set up the sidebar, which is present on all pages of the website, you will need to modify files in your repository. 
+In order to set up the left sidebar, which is present on all pages of the website, you will need to modify files in your repository. 
 
 To do this, I would recommend cloning the repository from GitHub onto your computer so you can make local changes and push those changes to GitHub. **Cloning** is where you create a copy of a repository locally on your computer. You can then modify files locally and push (or upload) those files to GitHub. See [here](https://www.w3schools.com/git/git_clone.asp) if you want to learn more about cloning on GitHub.
 
@@ -111,8 +110,6 @@ In order to edit your website's home page, you will need to edit the `about.md` 
 
 You can change the title of the website's home page by modifying the `title` at the top. All of the content on the home page is written using Markdown, so you can add headers, plain text, images, links, to your liking!
 
-You can look at the raw code for the home page of my website [here](https://github.com/hannahhafner/hannahhafner.github.io/blob/master/_pages/about.md?plain=1). 
-
 ## Step 5: Add or Remove Pages from the Navigation Menu
 You might have noticed that the navigation menu by default contains the following webpages: Publications, Talks, Teaching, Portfolio, Blog Posts, CV, Guide. You may not want all of these pages on your website, or you might want to add new pages. 
 
@@ -120,7 +117,7 @@ You might have noticed that the navigation menu by default contains the followin
 
 To remove pages from the navigation menu, you can delete or comment out pages from the `navigation.yml` file, which lives in the `_data/` folder. Note that if you comment out or delete a page from the navigation menu, **this will not fully remove the page from your website**, it only removes the webpage from the navigation menu. 
 
-You can see this if you click on the sitemap in the footer of the website — all of the website pages are listed, regardless if they are in the Navigation menu. You can remove the Sitemap [here](https://github.com/academicpages/academicpages.github.io/wiki/Customizing-the-layout-of-your-site#removing-the-sitemap)
+You can see this if you click on the sitemap in the footer of the website — all of the website pages are listed, regardless if they are in the Navigation menu. You can remove the Sitemap [here](https://github.com/academicpages/academicpages.github.io/wiki/Customizing-the-layout-of-your-site#removing-the-sitemap).
 
 ![Site map](/images/footer.png)
 
@@ -162,11 +159,23 @@ permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
-redirect_to: /files/myCV.pdf
+redirect_to: /files/myCV.pdf # This is the redirect to my CV file
 ---
 ```
 
 This ensures that when a user clicks on the CV tab, they will be taken to your CV file instead of a Markdown CV. 
+
+## BONUS: Previewing Your Website
+As you are adding and updating pages to your website, you may want to run the website locally on your computer, as every commit you push to GitHub means that those changes are visible to the public. 
+
+To do this, you'll have to install some software to your computer, namely
+* Homebrew
+* Ruby
+* Bundler
+
+I would recommend following [Rob Williams' tutorial](https://jayrobwilliams.com/posts/2020/06/academic-website/) (look for the section on previewing your website) for more details! 
+
+**Note**: I ran into a dependency error after following Williams' tutorial where I needed to upgrade my ruby version from the native MacOS 2.6.x version. After doing that, my ruby was version 4.0.5, however that *also* caused dependency version issues. If you're running into a similar problem, try downgrading your ruby version so it is in between the two versions (mine is 3.1.6).
 
 ## Read More
 Congratulations! At the end of this tutorial, you should have a *live academic website* with a homepage and CV and with even  some additional tabs in the navigation menu.
