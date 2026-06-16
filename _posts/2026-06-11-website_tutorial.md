@@ -178,7 +178,7 @@ I would recommend following [Rob Williams' tutorial](https://jayrobwilliams.com/
 **Note**: I ran into a dependency error after following Williams' tutorial where I needed to upgrade my ruby version from the native MacOS 2.6.x version. After doing that, my ruby was version 4.0.5, however that *also* caused dependency version issues. If you're running into a similar problem, try downgrading your ruby version so it is in between the two versions (mine is 3.1.6).
 
 ## Read More
-Congratulations! At the end of this tutorial, you should have a *live academic website* with a homepage and CV and with even  some additional tabs in the navigation menu.
+Congratulations! At the end of this tutorial, you should have a *live academic website* with a homepage and CV and even some additional tabs in the navigation menu.
 
 * Now that the foundation of your website is set up, I highly recommend checking out the [Academic Pages wiki](https://github.com/academicpages/academicpages.github.io/wiki) for more information. 
 * I would also recommend checking out Rob Williams' tutorials on [building an academic website](https://jayrobwilliams.com/posts/2020/06/academic-website/), [customizing an academic website](https://jayrobwilliams.com/posts/2020/07/customizing-website/), and [adding content to an academic website](https://jayrobwilliams.com/posts/2020/08/website-content/).

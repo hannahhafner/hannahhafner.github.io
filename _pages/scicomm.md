@@ -19,7 +19,7 @@ Covering topics from memory, bioconjugates, and glial cells  to the age-old ques
 ## Science Communication Talk and Workshop
 ![Science Communication Talk and Workshop](/images/scicomm_workshop.jpeg)
 
-In my final semester at Smith, I organized a science communication talk and workshop jointly hosted by the Smith College Department of Neuroscinece and the Jandon Center for Community Engagement.
+In my final semester at Smith, I organized a science communication talk and workshop jointly hosted by the Smith College Department of Neuroscience and the Jandon Center for Community Engagement.
 
 The event included a talk by invited science journalist [Carmen Drahl](https://www.carmendrahl.com/) and a workshop teaching participants to deliver recent science news to a variety of different audiences.  
 
